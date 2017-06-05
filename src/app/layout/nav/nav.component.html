@@ -1,0 +1,17 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" [routerLink]="mainMenuLinks[0].value">{{title}}</a>
+    </div>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li *ngFor="let link of mainMenuLinks"
+          [routerLinkActive]="'active'"
+          [routerLinkActiveOptions]="{exact: true}"
+      >
+        <a [routerLink]="link.value">{{link.text}}</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
